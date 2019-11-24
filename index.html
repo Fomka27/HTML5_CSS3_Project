@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebPR</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsiv.css">
+</head>
+
+<body>
+    <div id="wrapper-fon">
+        <div id="wrapper">
+            <header>
+                <div id="header-top" class="center">
+                    <div class="logo">
+                        <p class="logoItem">logo</p>
+                        <div class="logo-text">
+                            <p>Lorem ipsum dolor sit, amet consectetur</p>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <p>+39 (080) 111 11 11</p>
+                        <div><button class="button-o" id="myBtn">Консультация</button></div>
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="wrapper-form">
+                                    <h2>Оставте заявку!</h2>
+                                    <p>Заполните Форму, указав Ваши Имя и Телефон, чтобы мы могли знать, как к Вам
+                                        обращатся
+                                    </p>
+                                    <p>Мы перезвоним Вам в течении 10 минут.</p>
+                                    <form id="contact-form" method="POST">
+                                        <div class="field-block">
+                                            <input id="name" class="field" name="name" required type="text"
+                                                placeholder="Введите имя">
+                                        </div>
+                                        <div class="field-block">
+                                            <input id="phone" class="field" name="phone" required type="text"
+                                                placeholder="Введите номер телефона">
+                                        </div>
+                                        <button class="mybutton">Оставить заявку</button>
+                                        <div class="field-check">
+                                            <input type="checkbox" class="form-checkbox" id="check-one" checked><label
+                                                for="check-one">Согласие на обработку персональных данных</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <input id="menu-toggle" type="checkbox" />
+                        <label class="menu-btn" for="menu-toggle">
+                            <span></span>
+                        </label>
+                        <div class="menu-box">
+                            <h2>Меню</h2>
+                            <nav class="menu-list">
+                                <ul class="center-list">
+                                    <li><a class="menu-item"href="#"><i class="fa fa-lg fa-square-o"></i> Главная</a></li>
+                                    <li><i class="fa fa-lg fa-square-o"></i><a class="menu-item" href="#">
+                                            Запуск рекламы</a></li>
+                                    <li><i class="fa fa-lg fa-square-o"></i><a class="menu-item" href="#">
+                                            Разработка сайтов</a></li>
+                                    <li><i class="fa fa-lg fa-square-o"></i><a class="menu-item" href="#">
+                                            Внедрение CRM</a></li>
+                                    <li><i class="fa fa-lg fa-square-o"></i><a class="menu-item" href="#">
+                                            Сопровождение</a></li>
+                                </ul>
+                            </nav>
+                            <h3>Наши контакты</h3>
+                            <div class="menu-contact">
+                                <ul class="center-list list-item">
+                                    <li><span class="square"></span><span class="text-item"> +38 (080) 111  11 11</span></li>
+                                    <li><span class="square"></span><span class="text-item"> г.Днепр, ул. Фиолетовая, 1 </span></li>
+                                </ul>
+                            </div>
+                            <img src="images/shutterstock_635005208_2057x0.jpg" alt="">
+                            <img class="bg-shadow" src="images/sve.png" alt="">
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="center">
+                <div class="main-heading">
+                    <h1>Интернет-Продажи с гарантией результата!</h1>
+                </div>
+                <div class="main-text">
+                    <p>Определим точки роста Вашего бизнеса и окупаемость выхода проекта в интернет</p>
+                </div>
+                <div class="main-list">
+                    <p><a href="#"><img src="images/check-box16.png" alt="square"> Запуск рекламы</a></p>
+                    <p><a href="#"><img src="images/check-box16.png" alt="square"> Разработка сайтов</a></p>
+                    <p><a href="#"><img src="images/check-box16.png" alt="square"> Внедрение CRM-систем</a> </p>
+                    <p><a href="#"><img src="images/check-box16.png" alt="square"> Сопровождение</a></p>
+                </div>
+                <div class="footer-block">
+                    <div class="slider">
+                        <ol class="slider-indicators">
+                            <li class="slider-num">02</li>
+                            <li class="slider-indicator" data-slide-to="0"></li>
+                            <li class="slider-indicator slider-indicator_active" data-slide-to="1"></li>
+                            <li class="slider-indicator" data-slide-to="2"></li>
+                            <li class="slider-indicator" data-slide-to="3"></li>
+                            <li class="slider-indicator" data-slide-to="4"></li>
+                            <li class="slider-indicator" data-slide-to="5"></li>
+                            <li class="slider-num">05</li>
+                        </ol>
+                    </div>
+                    <div class="slider-control">
+                        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <div class="footer-text">
+                        <p class="text-item"><span class="square"></span> Работаем с 2000 года</p>
+                        <p class="text-item"><span class="square"></span> 1000 Выполненных проектов</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="script/jquery/jquery-3.4.1.min.js"></script>
+    <script src="script/jquery.backgroundvideo.min.js"></script>
+    <script src="script/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var videobackground = new $.backgroundVideo($('body'), {
+                "align": "centerXY",
+                "width": 1280,
+                "height": 720,
+                "path": "video/",
+                "filename": "videoFon",
+                "types": ["mp4", "ogg", "webm"],
+                "preload": true,
+                "autoplay": true,
+                "loop": true
+            });
+        });
+    </script>
+</body>
+
+</html>

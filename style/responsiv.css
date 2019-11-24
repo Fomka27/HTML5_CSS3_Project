@@ -1,0 +1,164 @@
+@media(max-width:1050px) {
+    .contact {
+        flex-wrap: wrap;
+        flex: 2 1;
+    }
+    .contact .button-o {
+        margin-left: 20px;
+    }
+    .menu-box h2, .menu-box h3 {
+        font-size: 24px;
+    } 
+    .menu-item {
+        font-size: 16px;
+    }
+    .menu-contact .center-list, .menu-list .center-list {
+        font-size: 16px;
+    }
+}
+@media(max-width:950px) {
+    .logo {
+        flex-wrap: wrap;
+        flex: 2 1;
+    }
+    .contact {
+        flex-wrap: wrap;
+        flex: 1 1;
+    }
+    .contact .button-o {
+        margin-left: 0;
+    }
+    .menu {
+        flex: 1 1;
+    }
+    .menu-box {
+        width: 50%;
+    }
+    .footer-text {
+        flex-flow: column wrap;
+    }
+    .footer-text p {
+        margin: 10px 0;
+    }
+    .wrapper-form h2 {
+        font-size: 26px;
+    }
+}
+@media(max-width:780px) {
+    .logo {
+        flex-wrap: wrap;
+    }
+    .contact {
+        flex-wrap: wrap;
+        flex: 1 1;
+    }
+    .menu-box {
+        width: 50%;
+    }
+    .modal {
+        left: 20%;
+        right: 20%;
+    }
+}
+@media(max-width:680px) {
+    .logo-text {
+        max-width: 200px;
+    }
+    .menu-box {
+        width: 100%;
+    }
+    .menu-box img {
+        display: none;
+    }
+    .slider {
+        left: -140px;
+    }
+    .slider-control {
+        position: initial;
+    }
+    .slider-control .fa-chevron-left {
+        left: 5%;
+    }
+    .footer-block {
+        flex-flow: column wrap;
+    }
+    .footer-text {
+        margin: 15px 0;
+    }
+    .slider, .slider-control {
+        display: none;
+    } 
+    .modal {
+        left: 10%;
+        right: 10%;
+    }
+}
+@media(max-width:500px) {
+    #header-top, .logo {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .contact {
+        flex-flow: column wrap;
+    }
+    .menu {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+    
+    .modal {
+        top: 15%;
+        left: 5%;
+    }
+    .close {
+        top: 30px;
+        left: 320px;
+        color: #000000;
+    }
+    .wrapper-form {
+        width: 340px;
+        padding: 10px;
+    }
+    .wrapper-form h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .field-check .form-checkbox {
+        top: 15px;
+        left: 0;
+    }
+}
+@media(max-width:380px) {
+    .modal {
+        top: 10%;
+        left: 1%;
+        font-size: 14px;
+    }
+    .close {
+        top: 30px;
+        left: 300px;
+        color: #000000;
+    }
+    .wrapper-form {
+        width: 320px;
+    }
+    .wrapper-form h2 {
+        margin: 0;
+    }
+    .wrapper-form p {
+        margin-bottom: 15px;
+    }
+    #contact-form .field-block input {
+        padding: 0 10px 0 10px;
+    }
+    .field-check .form-checkbox {
+        top: 25px;
+        left: 0;
+    }
+    .field-check label {
+        top: 10px;
+        font-size: 12px;
+        text-align: initial;
+    }
+}

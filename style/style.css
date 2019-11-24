@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'Muller Regular';
+    src: local('Muller Regular'), url('font/Muller Regular.otf') format('otf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MullerExtraBold';
+    src: local('MullerExtraBold'), url('font/MullerExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Muller-Medium';
+    src: local('Muller-Medium'), url('font/Muller-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MullerBold';
+    src: local('MullerBold'), url('font/MullerBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MullerLight';
+    src: local('MullerLight'), url('font/MullerLight.woff') format('woff');
+    font-style: normal;
+}
+html, body {
+    margin: 0;
+}
+#wrapper-fon {
+    background: rgba(0,0,0,0.7);
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+}
+#wrapper {
+    display: none;
+}
+* { 
+	box-sizing: border-box;
+}
+p, h1, h2, h3, li, span {
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    list-style: none;
+}
+.center {
+    max-width: 95vw;
+    width: 100%;
+    margin: auto;
+}
+/*Стиль верхнего блока Header---------------------------*/
+#header-top {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    min-height: 100px;
+    margin-bottom: 5%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 3 2;
+}
+.logo .logoItem {
+    text-transform: uppercase;
+    font-family: 'MullerExtraBold';
+    font-size: 46px;
+}
+.logo .logo-text {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:  250px;
+    padding-left: 5%;
+    font-family: 'Muller Regular';
+    font-size: 15px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    flex: 2 1;
+    /* margin-left: 25%; */
+}
+.contact p {
+    font-family: 'Muller-Medium';
+    font-size: 18px;
+}
+.contact .button-o {
+    color: #F7C801;
+    background-color: rgba(0,0,0,0);
+    border-style: none;
+    margin-left: 45px;
+    padding: 5px 20px;
+    font-family: 'MullerBold';
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid #F7C801;
+    border-radius: 4px;
+}
+.contact .button-o:hover {
+    color: #000000;
+    background-color: #F7C801;
+    transition-duration: .25s;
+}
+.contact .button-o:focus {
+    color: #000000;
+    background-color: #F7C801;
+}
+.menu {
+    position: relative;
+    flex: 0 1;
+}
+/*Стиль меню и гамбургер меню*/
+#menu-toggle {
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-btn > span {
+    transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menu-box {
+    visibility: visible;
+    right: 0;
+}
+.menu-btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+} 
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #E5E5E5;
+    transition-duration: .15s;
+}
+.menu-btn > span::before {
+    content: '';
+    top: -10px;
+}
+.menu-btn > span::after {
+    content: '';
+    top: 10px;
+} 
+.menu-box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 30%;
+    height: 100%;
+    padding: 60px 20px;
+    background-color: rgb(28, 31, 35);
+    transition-duration: .15s;
+}
+.menu-box h2, .menu-box h3 {
+    margin-left: 40px;
+    font-family: 'MullerExtraBold';
+    font-size: 32px;
+} 
+.menu-item {
+    display: inline-block;
+    color: white;
+    font-family: 'Muller-Medium';
+    /* font-size: 21px; */
+}
+.menu-item:hover {
+    padding: 10px 10px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #F7C801;
+    border-radius: 3px;
+    transition-duration: .25s;
+    
+}
+.menu-item i:hover {
+    transform: rotate(45deg);
+    transition: .3s;
+}
+.menu-item:focus {
+    color: #000000;
+    background-color: #FFCD00;
+    transition-duration: .25s;
+}
+.menu-box img {
+    position: absolute;
+    top: 0;
+    right: 95%;
+    width: 100%;
+    height: 100%;
+    transition-duration: .15s;
+}
+.menu-box .bg-shadow {
+    right: 100%;
+}
+.menu-box .logo-menu {
+    position: absolute;
+    top: 10px;
+    left: -90%;
+    width: 120px;
+    height: 70px;
+    z-index: 4;
+}
+.menu-box li {
+    margin: 15px 0;
+}
+.menu-list .center-list, .menu-contact .center-list  {
+    display: flex;
+    flex-direction: column;
+}
+.menu-list .fa-square-o {
+    display: inline-block;
+    padding-right: 15px;
+    color: #F7C801;
+}
+.menu-contact li {
+    margin: 15px 7px ;
+}
+.menu-contact .text-item {
+    display: inline-flex;
+    width: 80%;
+    color: white;
+    font-family: 'Muller-Medium';
+    font-size: 18px;
+    padding-left: 15px;
+}
+.menu-contact .square {
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    background: #F7C801;
+    border-radius: 2px;
+}
+/*Стиль main блока--------------------------------------*/
+.main-heading h1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:  740px;
+    text-transform: uppercase;
+    font-family: 'MullerExtraBold';
+    font-size: 46px;
+    line-height: 55px;
+}
+.main-text p {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    font-family: 'MullerLight';
+    font-size: 23px;
+}
+.main-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    font-family: 'Muller-Medium';
+    font-size: 21px;
+}
+.main-list p {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.main-list p a {
+    display: inline-block;
+    border-bottom: 1px solid #F7C801;
+    cursor: pointer;
+}
+.main-list p a:after {
+    background-color: #F7C801;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 0%;
+    transition: width .3s ease-in-out;
+}
+.main-list p a:hover:after,
+.main-list p a:focus:after {
+    width: 100%;
+    border-top-right-radius: 5px;
+}
+.main-list p img {
+    display: inline-block;
+    padding-right: 10px;
+}
+.main-list p img:hover,
+.main-list p img:focus {
+    transform: rotate(45deg);
+    transition: width .3s;
+}
+/*Нижние блок----------------------------------------------*/
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+.footer-text {
+    display: flex;
+    align-items: center;
+}
+.footer-text .square {
+    width: 5px;
+    height: 5px;
+    background: #F7C801;
+    margin-right: 10px;
+}
+.footer-text .text-item {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    font-family: 'Muller-Medium';
+    font-size: 18px;
+    font-weight: 500;
+}
+/*Стиль слайдера с индикатором*/
+.slider-control {
+    position: fixed;
+    left: 350px;
+    width: 5%;
+    color: #fff;
+    /* margin-left: 20px; */
+} 
+.slider-control .fa-chevron-left, .slider-control .fa-chevron-right  {
+    position: absolute;
+    cursor: pointer;
+} 
+.slider-control .fa-chevron-left {
+    left: 0;
+}
+.slider-control .fa-chevron-right {
+    right: 5%;
+}
+.slider-control .fa-chevron-left:hover,
+.slider-control .fa-chevron-right:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .6;
+}
+/* индикаторы слайдера */
+.slider {
+    position: relative;
+}
+.slider-indicators {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+.slider-indicator {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+} 
+.slider-indicator::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: "";
+}
+.slider-indicator::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: "";
+}
+.slider-indicator_active {
+    background-color: #fff;
+}
+.slider-indicators .slider-num {
+    padding: 0 10px;
+    font-family: 'Muller Regular';
+    font-size: 18px;
+    font-weight: bold;
+}
+/*Стиль формы-----------------------------------------------*/
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 30%;
+    top: 15%;
+    font-family: 'Muller Regular';
+    font-size: 16px;
+}
+/* Кнопка Close */
+.close {
+    position: relative;
+    top: 0;
+    left: 405px;
+    color: white;
+    font-size: 32px;
+}
+.close:hover,
+.close:focus {
+    color: #F7C801;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px;
+}
+.wrapper-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 400px;
+    height: 525px;
+    padding: 20px;
+    border-radius: 3px;
+}
+.wrapper-form h2 {
+    font-family: 'MullerExtraBold';
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 40px;
+    width: 85%;
+    color: #0D1E28;
+    margin: 15px 0;
+}
+.wrapper-form p {
+    color: #333333;
+    text-align: center;
+    height: 36px;
+    width: 85%;
+}
+#contact-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 243px;
+    width: 85%;
+    margin: 25px 0;
+}
+#contact-form .field-block input {
+    display: block;
+    height: 50px;
+    width: 234px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    margin:  0 0 20px 0;
+    padding: 0 15px 0 15px;
+    cursor: text;
+    color: #000000;
+}
+#contact-form .field-check {
+    display: block;
+    position: relative;
+    height: 38px;
+    width: 70%;
+    margin: 15px;
+    cursor: pointer;
+}
+.field-check .form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    color: #666;
+    top: 15px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+}
+.form-checkbox:checked::before {
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 3px;
+    top: -1px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+.form-checkbox:hover {
+    background-color: #f7f7f7;
+}
+.form-checkbox:checked {
+    background-color: #f1f1f1;
+}
+.field-check label {
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #757575;
+    margin: 10px 0;
+    cursor: pointer;
+}
+#contact-form .mybutton {
+    cursor: pointer;
+    font-family: 'MullerBold';
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    height: 50px;
+    width: 234px;
+    color: #000000;
+    background-color: #F7C801;
+   
+}
+#contact-form .mybutton:hover {
+    color: #000000;
+    background-color: #F7C801;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #F7C801;
+    border-radius: 3px;
+    transition-duration: .25s;
+}
